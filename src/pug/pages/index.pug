@@ -1,0 +1,40 @@
+extends ../templates/__default
+
+block vars
+  -
+      var params = {
+          pageType: 'home',
+          pageTitle: 'Список фильмов'
+      }
+
+block content
+  section(class="content")
+    div(class="container")
+      h2(class="content__title") СПИСОК ФИЛЬМОВ
+      form#film-form
+        label(for="title", class="content__desc") Название:
+        br
+        input(type="text", class="content__type", id="title", name="title")
+        br
+        label(for="genre", class="content__desc") Жанр:
+        br
+        input(type="text", class="content__type", id="genre", name="genre")
+        br
+        label(for="releaseYear", class="content__desc") Год:
+        br
+        input(type="text", class="content__type", id="releaseYear", name="releaseYear")
+        br
+        input(type="checkbox", id="isWatched", name="isWatched")
+        label(for="isWatched", class="content__desc") Успели посмотреть?
+        br
+        button(type="submit", class="btn") Готово
+      table#film-table
+        thead
+          tr
+            th(class="content__desc") Название
+            th(class="content__desc") Жанр
+            th(class="content__desc") Год
+            th(class="content__desc") Успели посмотреть?
+            
+        tbody#film-tbody
+          

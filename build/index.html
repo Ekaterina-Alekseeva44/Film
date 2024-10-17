@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ru" data-theme="default"><head><meta charset="UTF-8"/><title>Список фильмов</title><link href="/css/app.min.css" rel="stylesheet" media="all"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="preload" href="/fonts/Roboto-Regular/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><script>// info: Для записи данных с бекенда для получения и обработки в JS.
+window.APP = {
+    // Режим работы проекта
+    mode: 'development',
+    // Путь до спрайта иконок
+    //svgSpritePath: '/media/icons/e.svg',
+    // Данные для Яндекс.Метрики
+    ym: {
+        id: 696969
+    },
+    sessid: null,
+    pageType: null,
+    routes: {
+        basket: '/basket',
+        product: '/product'
+    }
+}</script></head><body class="js-body home-page"><div id="__SVG-container__"></div><header class="header js-header"><div class="container"></div></header><section class="content"><div class="container"><h2 class="content__title">СПИСОК ФИЛЬМОВ</h2><form id="film-form"><label class="content__desc" for="title">Название:</label><br><input class="content__type" type="text" id="title" name="title"><br><label class="content__desc" for="genre">Жанр:</label><br><input class="content__type" type="text" id="genre" name="genre"><br><label class="content__desc" for="releaseYear">Год:</label><br><input class="content__type" type="text" id="releaseYear" name="releaseYear"><br><input type="checkbox" id="isWatched" name="isWatched"><label class="content__desc" for="isWatched">Успели посмотреть?</label><br><button class="btn" type="submit">Готово</button></form><table id="film-table"><thead><tr><th class="content__desc">Название</th><th class="content__desc">Жанр</th><th class="content__desc">Год</th><th class="content__desc">Успели посмотреть?</th></tr></thead><tbody id="film-tbody"></tbody></table></div></section><footer class="footer js-footer"></footer><script src="/js/common.bundle.js" defer></script><script src="/js/home.bundle.js" defer></script></body></html>
